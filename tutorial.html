@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="docstrings---sphinx-tutorial">Docstrings - Sphinx Tutorial</h1>
+<p>The goal of this tutorial is to show you the basic principles of <a href="https://www.pythonforbeginners.com/basics/python-docstrings">doctring</a> comments in python, and semi-automatic documentation generation using <a href="http://www.sphinx-doc.org/en/master/">Sphinx</a>.</p>
+<p>https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/#basic-example</p>
+<h1 id="docstring">Docstring</h1>
+<ul>
+<li>Check the following links which present Python docstrings:</li>
+<li><a href="https://www.python.org/dev/peps/pep-0256/">PEP 256</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0257/">PEP 257</a></li>
+<li>You can use different documentation styles. Google or numpy are more common, but the reStructuredText is the standard version understood by the Sphinx program (documentation generator):</li>
+<li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html#example-google">Google Python Style</a></li>
+<li><a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html">Numpy Python Style</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0287/">reStructuredText Style</a></li>
+<li>Comment your code properly following the Numpy or the Google style.</li>
+<li>Open a python interpreter, import one function of your package, and call the <code>help()</code> function sending it your function as a parameter.</li>
+</ul>
+<h1 id="install-the-libraries">Install the libraries</h1>
+<ul>
+<li>Check if Sphinx is installed by typing <code>sphinx-build --version</code></li>
+<li><code>pip install sphinx</code></li>
+<li><code>pip install recommonmark</code></li>
+<li><code>pip install sphinxcontrib-napoleon</code> (not necessary for recent versions of Sphinx)</li>
+</ul>
+<h1 id="create-a-docs-at-the-same-level-of-your-package">Create a docs at the same level of your package</h1>
+<ul>
+<li><code>mkdir docs</code></li>
+<li><code>cd docs</code></li>
+</ul>
+<h1 id="run-the-sphinx-quickstart-script">Run the <code>sphinx-quickstart</code> script</h1>
+<p><code>sphinx-quickstart</code></p>
+<p>Answer the different question, you should specifically say yes to some of them:</p>
+<pre><code>&gt; Separate source and build directories (y/n) [n]:
+y
+&gt; Name prefix for templates and static dir [_]:
+_
+The project name will occur in several places in the built documentation.
+&gt; Project name: Project666
+&gt; Author name(s): bad dog
+&gt; Project release []: 0
+For a list of supported codes, see
+http://sphinx-doc.org/config.html#confval-language.
+&gt; Project language [en]:
+The file name suffix for source files. Commonly, this is either &quot;.txt&quot;
+or &quot;.rst&quot;.  Only files with this suffix are considered documents.
+&gt; Source file suffix [.rst]:
+One document is special in that it is considered the top node of the
+&quot;contents tree&quot;, that is, it is the root of the hierarchical structure
+of the documents. Normally, this is &quot;index&quot;, but if your &quot;index&quot;
+document is a custom template, you can also set this to another filename.
+&gt; Name of your master document (without suffix) [index]:
+Indicate which of the following Sphinx extensions should be enabled:
+&gt; autodoc: automatically insert docstrings from modules (y/n) [n]: y
+&gt; doctest: automatically test code snippets in doctest blocks (y/n) [n]: y
+&gt; intersphinx: link between Sphinx documentation of different projects (y/n) [n]: n
+&gt; todo: write &quot;todo&quot; entries that can be shown or hidden on build (y/n) [n]: y
+&gt; coverage: checks for documentation coverage (y/n) [n]: y
+&gt; imgmath: include math, rendered as PNG or SVG images (y/n) [n]: n
+&gt; mathjax: include math, rendered in the browser by MathJax (y/n) [n]: y
+&gt; ifconfig: conditional inclusion of content based on config values (y/n) [n]: y&gt; viewcode: include links to the source code of documented Python objects (y/n) [n]: y
+&gt; githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]: y
+&gt; Create Makefile? (y/n) [y]: y
+&gt; Create Windows command file? (y/n) [y]: n</code></pre>
+<p>After this step the following folder and files will be created in the <code>docs</code> folder:</p>
+<ul>
+<li><code>build</code>: (empty) The generated html documentation files will be placed here</li>
+<li><p><code>source</code>:</p>
+<ul>
+<li><code>_static</code>: (empty) Files other than code (e.g., images) should be placed here</li>
+<li><code>_templates</code>: (empty)</li>
+<li><code>conf.py</code>: Python configuration file</li>
+<li><code>index.rst</code>: Documentation's main page</li>
+</ul></li>
+<li><p>Makefile: Make file to generate the html documentation page</p></li>
+</ul>
+<h1 id="check-the-index.rst-file">Check the <code>index.rst</code> file</h1>
+<p>The <code>toctree</code> section defines the documentation's table of content. Below this section you should insert other <code>.rst</code> file names (but without their extension) for each section :</p>
+<pre><code>Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   intro
+   install
+   useless section
+   useless section 2</code></pre>
+<ul>
+<li>Create a <code>intro.rst</code> file and incorporate it to the <code>index.rst</code></li>
+<li>Check the <a href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText style syntax</a></li>
+<li>If you have doubts check the <a href="http://gdrcorelec.ups-tlse.fr/files/Sphinx/build/html/install.html">creating a new Sphinx project page</a></li>
+<li>Add an image to <code>intro.rst</code> (put your imager in the <code>_static</code> folder)</li>
+<li>There is blank line between the list line containing the toctree parameters and the files that should be added</li>
+</ul>
+<h1 id="add-napoleon-to-the-extensions-list-in-conf.py">Add napoleon to the extensions list in <code>conf.py</code></h1>
+<p><code>napoleon</code> is a Sphinx extension that parses docstrings with NumPy and Google style, and converts them to the reStructuredText style before sending it to Sphinx. <code>napoleon</code> does not modify your source code docstrings directly.</p>
+<p>Add recommonmark to the extesions list in <code>conf.py</code> to enable it: <code>extensions = ['sphinx.ext.napoleon']</code></p>
+<h1 id="enable-recommonmark">Enable <code>recommonmark</code></h1>
+<p><code>recommonmark</code> is a Sphinx extension that allows you to use Markdown and reStructuredText in the same Sphinx project.</p>
+<p>Add <code>recommonmark</code> to the extensions list in <code>conf.py</code> to enable it: <code>extensions = ['recommonmark']</code></p>
+<h1 id="run-the-makefile">Run the makefile</h1>
+<ul>
+<li>Type <code>make html</code> to execute the Makefile</li>
+<li>Check the content of the <code>build</code> folder</li>
+</ul>
+<h1 id="generate-automatically-the-documentation">Generate automatically the documentation</h1>
+<p>Sphinx can parse the docstrings within your code to generate a documentation for the project (with the <code>autodoc</code> option)</p>
+<ul>
+<li>Uncomment the following lines in the <code>conf.py</code> file, and add the relative path to the code (from the folder where <code>conf.py</code> is located):</li>
+</ul>
+<pre><code>import os
+import sys
+sys.path.insert(0, os.path.abspath(&#39;../..&#39;))</code></pre>
+<ul>
+<li>Execute the following command line: <code>sphinx-apidoc -f -o source/  ../package/</code></li>
+<li><code>-f</code> forces sphinx to erase the documents it created before building new documents</li>
+<li><code>-o &lt;output folder&gt; &lt;python package relative path&gt;</code> specifies the output files location and the python package location</li>
+<li>Check the files in the <code>source</code> folder</li>
+<li>Modify the <code>index.rst</code> file to include the new files that were created by <code>sphinx-apidoc</code>.</li>
+<li>Clean the output files <code>make clean</code></li>
+<li>Execute the Makefile <code>make html</code></li>
+<li>Check the output</li>
+</ul>
+<h1 id="add-examples-to-the-documentation">Add examples to the documentation</h1>
+<ul>
+<li>Try to include examples of code to your documentation, using the <a href="http://www.sphinx-doc.org/es/stable/ext/doctest.html#directives">appropriate reStructuredText syntax</a>.</li>
+<li>Add examples to your docstrings and run the Makefile again.</li>
+<li>Add some <a href="http://www.sphinx-doc.org/es/stable/ext/math.html">math formulas to your docstrings</a></li>
+</ul>
+<h1 id="documentation-theme">Documentation Theme</h1>
+<p>It is possible to <a href="http://www.sphinx-doc.org/es/stable/theming.html">customize the theme</a>. Take a look to the available themes, and to their respective options, and customize it.</p>
+<h1 id="some-interesting-tutorials">Some interesting tutorials</h1>
+<ul>
+<li><a href="https://www.ibm.com/developerworks/ssa/opensource/library/os-sphinx-documentation/index.html">tutorial in spanish</a></li>
+<li><a href="https://gisellezeno.com/tutorials/sphinx-for-python-documentation.html">tutorial in english</a></li>
+<li><a href="http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html">reStructuredText</a></li>
+</ul>
+</body>
+</html>

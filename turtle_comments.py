@@ -1,28 +1,35 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-import turtle
+# General Imports
+import turtle 
 
-def carre(animal,size):
-    """Args:
-        animal (str): name of the animal, must be one word without spaces.
+def carre(animal,size): # ATTENTION : la fonction ne marche pas avec animal est une string...
+    """ draws a square of size "size", the drawing made by the chosen animal.
+    
+    Args:
+        animal (turtle): name of the animal, must be a turtle object. 
         size (int): size of the square, must be an integer.
-       
-       Return:
+    
+    Return: # est-ce que c'est vraiment un return?
         draw a square of size "size", the drawing made by the chosen animal.
-        """
+    """
     for i in range (4):
         animal.forward(size)
         animal.left(90)
 
 def petitscarres(animal,n,size):
-    """Args:
-        animal (str): name of the animal, must be one word without spaces.
+    """draws n square of size "size", the drawing made by the chosen animal.
+    
+    Args:
+        animal (turtle): name of the animal, must be a turtle object.
         n (int) : number of square to draw, must be an integer.
         size (int): size of the square, must be an integer.
-       
-       Return:
+    
+    Return: # IDEM
         draw n square of size "size", the drawing made by the chosen animal.
-        """
-    a=0
+    """
+    a=0 # A quoi sert a?
     for i in range (n):
         carre(animal,size)
         animal.penup()
@@ -30,15 +37,17 @@ def petitscarres(animal,n,size):
         animal.pendown()
 
 def carresconc(animal,n,size):
-    """Args:
-        animal (str): name of the animal, must be one word without spaces.
+    """draws n concentric squares of initial size "size", the drawing made by the chosen animal.
+    
+    Args:
+        animal (turtle): name of the animal, must be a turtle object.
         n (int) : number of square to draw, must be an integer.
         size (int): size of the first square (the smallest) , must be an integer.
-       
-       Return:
+    
+    Return: #IDEM
         draw n concentric squares of initial size "size", the drawing made by the chosen animal.
-        """
-    a=size
+    """
+    a=size # A quoi sert a?
     for i in range(n):
         carre(animal,size)
         animal.penup()
@@ -49,21 +58,53 @@ def carresconc(animal,n,size):
         size=size+20
         animal.pendown()
 
-def draw_poly(t,n,sz):
+def draw_poly(animal,n,sz):
+    """draws a "n"-gon with sides of size size "size", the drawing made by the chosen animal.
+    
+    Args:
+        animal (turtle): name of the animal, must be a turtle object.
+        n (int) : number of sides of the polygon, must be an integer.
+        size (int): size of the sides of the n-gon, must be an integer.
+    """
     for i in range(n):
-        t.forward(sz)
-        t.left(360/n)
+        animal.forward(sz)
+        animal.left(360/n)
 
-def bigstar(t,n,sz):
+def bigstar(animal,n,size):
+    """draws a star made up from "n" squares, which sides are of size "size", the drawing made by the chosen animal.
+    
+    Args:
+        animal (turtle): name of the animal, must be a turtle objecanimal
+        n (int) : number of squares used to draw the star, must be an integer.
+        size (int): size of the sides of the n-gon, must be an integer.
+    """
+    
     for i in range (n):
         for k in range (4):
-            carre(t,sz)
-            t.left(-90)
-        t.left(-90/n)
+            carre(animal,size)
+            animal.left(-90)
+        animal.left(-90/n)
 
-def spiral(t,n,angle,size,space):
-    t.left(-180)
+def spiral(animal,n,angle,size,space):
+    """draws a spiral made up from "n" lines of increasing size, the drawing made by the chosen animal.
+    
+    Args:
+        animal (turtle): name of the animal, must be a turtle object.
+        n (int): number of lines used to draw the spiral, must be an integer.
+        angle (int): the angle between two consecutive lines, must be an integer. 
+        size (int): size of the first line, must be an integer.
+        space (int): every time a line is drawn, the size of the next size is increased by "space", must be an integer.
+    """
+    
+    animal.left(-180)
     for i in range (n):
-        t.forward(size)
-        t.left(-90-angle)
+        animal.forward(size)
+        animal.left(-90-angle)
         size+=space
+
+
+# code test
+window=turtle.Screen()
+tess=turtle.Turtle() # : modele d'initialisation d'une turtle
+spiral(tess,10,13, 20,9)
+turtle.mainloop()
