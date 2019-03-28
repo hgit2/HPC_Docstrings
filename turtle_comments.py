@@ -85,6 +85,18 @@ def spiral(animal,n,angle,size,space):
         angle (int): the angle between two consecutive lines, must be an integer. 
         size (int): size of the first line, must be a positive integer.
         space (int): every time a line is drawn, the size of the next size is increased by "space", must be a positive integer.
+        
+    Return:
+        the animal's position.
+        
+    Examples:
+        
+        >>> import turtle
+        >>> window=turtle.Screen()
+        >>> tess=turtle.Turtle()
+        >>> spiral(tess,10,13, 20,9)
+        (60.18,19.15)
+        
     """
     
     animal.left(-180)
@@ -92,7 +104,7 @@ def spiral(animal,n,angle,size,space):
         animal.forward(size)
         animal.left(-90-angle)
         size+=space
-    return animal
+    return animal.pos()
 
 
 # code test
