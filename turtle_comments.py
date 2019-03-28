@@ -10,9 +10,6 @@ def carre(animal,size): # ATTENTION : la fonction ne marche pas avec animal est 
     Args:
         animal (turtle): name of the animal, must be a turtle object. 
         size (int): size of the square, must be an integer.
-    
-    Return: # est-ce que c'est vraiment un return?
-        draw a square of size "size", the drawing made by the chosen animal.
     """
     for i in range (4):
         animal.forward(size)
@@ -25,9 +22,6 @@ def petitscarres(animal,n,size):
         animal (turtle): name of the animal, must be a turtle object.
         n (int) : number of square to draw, must be an integer.
         size (int): size of the square, must be an integer.
-    
-    Return: # IDEM
-        draw n square of size "size", the drawing made by the chosen animal.
     """
     a=0 # A quoi sert a?
     for i in range (n):
@@ -43,9 +37,6 @@ def carresconc(animal,n,size):
         animal (turtle): name of the animal, must be a turtle object.
         n (int) : number of square to draw, must be an integer.
         size (int): size of the first square (the smallest) , must be an integer.
-    
-    Return: #IDEM
-        draw n concentric squares of initial size "size", the drawing made by the chosen animal.
     """
     a=size # A quoi sert a?
     for i in range(n):
