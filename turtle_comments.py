@@ -4,7 +4,7 @@
 # General Imports
 import turtle 
 
-def carre(animal,size): # ATTENTION : la fonction ne marche pas avec animal est une string...
+def carre(animal,size):
     """ draws a square of size "size", the drawing made by the chosen animal.
     
     Args:
