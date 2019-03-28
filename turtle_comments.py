@@ -92,10 +92,11 @@ def spiral(animal,n,angle,size,space):
         animal.forward(size)
         animal.left(-90-angle)
         size+=space
+    return animal
 
 
 # code test
 window=turtle.Screen()
 tess=turtle.Turtle() # : modele d'initialisation d'une turtle
-spiral(tess,10,13, 20,9)
+print(spiral(tess,10,13, 20,9))
 turtle.mainloop()
