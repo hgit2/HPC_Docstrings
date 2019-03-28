@@ -9,7 +9,7 @@ def carre(animal,size): # ATTENTION : la fonction ne marche pas avec animal est 
     
     Args:
         animal (turtle): name of the animal, must be a turtle object. 
-        size (int): size of the square, must be an integer.
+        size (int): size of the square, must be a positive integer.
     """
     for i in range (4):
         animal.forward(size)
@@ -20,8 +20,8 @@ def petitscarres(animal,n,size):
     
     Args:
         animal (turtle): name of the animal, must be a turtle object.
-        n (int) : number of square to draw, must be an integer.
-        size (int): size of the square, must be an integer.
+        n (int) : number of square to draw, must be a positive integer.
+        size (int): size of the square, must be a positive integer.
     """
     a=0 # A quoi sert a?
     for i in range (n):
@@ -35,8 +35,8 @@ def carresconc(animal,n,size):
     
     Args:
         animal (turtle): name of the animal, must be a turtle object.
-        n (int) : number of square to draw, must be an integer.
-        size (int): size of the first square (the smallest) , must be an integer.
+        n (int) : number of square to draw, must be a positive integer.
+        size (int): size of the first square (the smallest) , must be a positive integer.
     """
     a=size # A quoi sert a?
     for i in range(n):
@@ -54,8 +54,8 @@ def draw_poly(animal,n,sz):
     
     Args:
         animal (turtle): name of the animal, must be a turtle object.
-        n (int) : number of sides of the polygon, must be an integer.
-        size (int): size of the sides of the n-gon, must be an integer.
+        n (int) : number of sides of the polygon, must be a positive integer.
+        size (int): size of the sides of the n-gon, must be a positive integer.
     """
     for i in range(n):
         animal.forward(sz)
@@ -66,8 +66,8 @@ def bigstar(animal,n,size):
     
     Args:
         animal (turtle): name of the animal, must be a turtle objecanimal
-        n (int) : number of squares used to draw the star, must be an integer.
-        size (int): size of the sides of the n-gon, must be an integer.
+        n (int) : number of squares used to draw the star, must be a positive integer.
+        size (int): size of the sides of the n-gon, must be a positive integer.
     """
     
     for i in range (n):
@@ -81,10 +81,10 @@ def spiral(animal,n,angle,size,space):
     
     Args:
         animal (turtle): name of the animal, must be a turtle object.
-        n (int): number of lines used to draw the spiral, must be an integer.
+        n (int): number of lines used to draw the spiral, must be a positive integer.
         angle (int): the angle between two consecutive lines, must be an integer. 
-        size (int): size of the first line, must be an integer.
-        space (int): every time a line is drawn, the size of the next size is increased by "space", must be an integer.
+        size (int): size of the first line, must be a positive integer.
+        space (int): every time a line is drawn, the size of the next size is increased by "space", must be a positive integer.
     """
     
     animal.left(-180)
