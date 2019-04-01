@@ -23,7 +23,6 @@ def petitscarres(animal,n,size):
         n (int) : number of square to draw, must be a positive integer.
         size (int): size of the square, must be a positive integer.
     """
-    a=0 # A quoi sert a?
     for i in range (n):
         carre(animal,size)
         animal.penup()
@@ -68,6 +67,14 @@ def bigstar(animal,n,size):
         animal (turtle): name of the animal, must be a turtle objecanimal
         n (int) : number of squares used to draw the star, must be a positive integer.
         size (int): size of the sides of the n-gon, must be a positive integer.
+        
+   .. math::
+       :nowrap:
+    
+       \\begin{eqnarray}
+           y    & = & ax^2 + bx + c \\
+       \\end{eqnarray}
+   
     """
     
     for i in range (n):
@@ -107,8 +114,8 @@ def spiral(animal,n,angle,size,space):
     return animal.pos()
 
 
-# code test
-window=turtle.Screen()
-tess=turtle.Turtle() # : modele d'initialisation d'une turtle
-print(spiral(tess,10,13, 20,9))
-turtle.mainloop()
+## code test
+#window=turtle.Screen()
+#tess=turtle.Turtle() # : modele d'initialisation d'une turtle
+#print(spiral(tess,10,13, 20,9))
+#turtle.mainloop()
