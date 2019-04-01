@@ -1,0 +1,216 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>turtle_comments module &#8212; HPC_Docstrings 0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="HPC_Docstrings" href="modules.html" />
+    <link rel="prev" title="GENERAL DESCRIPTION" href="intro.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-turtle_comments">
+<span id="turtle-comments-module"></span><h1>turtle_comments module<a class="headerlink" href="#module-turtle_comments" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="turtle_comments.bigstar">
+<code class="descclassname">turtle_comments.</code><code class="descname">bigstar</code><span class="sig-paren">(</span><em>animal</em>, <em>n</em>, <em>size</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/turtle_comments.html#bigstar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#turtle_comments.bigstar" title="Permalink to this definition">¶</a></dt>
+<dd><p>draws a star made up from “n” squares, which sides are of size “size”, the drawing made by the chosen animal.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Args:</dt>
+<dd>animal (turtle): name of the animal, must be a turtle objecanimal
+n (int) : number of squares used to draw the star, must be a positive integer.
+size (int): size of the sides of the n-gon, must be a positive integer.</dd>
+</dl>
+</div></blockquote>
+<div class="math">
+\begin{eqnarray}
+    y    &amp; = &amp; ax^2 + bx + c \
+\end{eqnarray}</div></dd></dl>
+
+<dl class="function">
+<dt id="turtle_comments.carre">
+<code class="descclassname">turtle_comments.</code><code class="descname">carre</code><span class="sig-paren">(</span><em>animal</em>, <em>size</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/turtle_comments.html#carre"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#turtle_comments.carre" title="Permalink to this definition">¶</a></dt>
+<dd><p>draws a square of size “size”, the drawing made by the chosen animal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>animal</strong> (<em>turtle</em>) – name of the animal, must be a turtle object.</li>
+<li><strong>size</strong> (<em>int</em>) – size of the square, must be a positive integer.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="turtle_comments.carresconc">
+<code class="descclassname">turtle_comments.</code><code class="descname">carresconc</code><span class="sig-paren">(</span><em>animal</em>, <em>n</em>, <em>size</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/turtle_comments.html#carresconc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#turtle_comments.carresconc" title="Permalink to this definition">¶</a></dt>
+<dd><p>draws n concentric squares of initial size “size”, the drawing made by the chosen animal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>animal</strong> (<em>turtle</em>) – name of the animal, must be a turtle object.</li>
+<li><strong>n</strong> (<em>int</em>) – number of square to draw, must be a positive integer.</li>
+<li><strong>size</strong> (<em>int</em>) – size of the first square (the smallest) , must be a positive integer.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="turtle_comments.draw_poly">
+<code class="descclassname">turtle_comments.</code><code class="descname">draw_poly</code><span class="sig-paren">(</span><em>animal</em>, <em>n</em>, <em>sz</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/turtle_comments.html#draw_poly"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#turtle_comments.draw_poly" title="Permalink to this definition">¶</a></dt>
+<dd><p>draws a “n”-gon with sides of size size “size”, the drawing made by the chosen animal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>animal</strong> (<em>turtle</em>) – name of the animal, must be a turtle object.</li>
+<li><strong>n</strong> (<em>int</em>) – number of sides of the polygon, must be a positive integer.</li>
+<li><strong>size</strong> (<em>int</em>) – size of the sides of the n-gon, must be a positive integer.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="turtle_comments.petitscarres">
+<code class="descclassname">turtle_comments.</code><code class="descname">petitscarres</code><span class="sig-paren">(</span><em>animal</em>, <em>n</em>, <em>size</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/turtle_comments.html#petitscarres"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#turtle_comments.petitscarres" title="Permalink to this definition">¶</a></dt>
+<dd><p>draws n square of size “size”, the drawing made by the chosen animal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>animal</strong> (<em>turtle</em>) – name of the animal, must be a turtle object.</li>
+<li><strong>n</strong> (<em>int</em>) – number of square to draw, must be a positive integer.</li>
+<li><strong>size</strong> (<em>int</em>) – size of the square, must be a positive integer.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="turtle_comments.spiral">
+<code class="descclassname">turtle_comments.</code><code class="descname">spiral</code><span class="sig-paren">(</span><em>animal</em>, <em>n</em>, <em>angle</em>, <em>size</em>, <em>space</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/turtle_comments.html#spiral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#turtle_comments.spiral" title="Permalink to this definition">¶</a></dt>
+<dd><p>draws a spiral made up from “n” lines of increasing size, the drawing made by the chosen animal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>animal</strong> (<em>turtle</em>) – name of the animal, must be a turtle object.</li>
+<li><strong>n</strong> (<em>int</em>) – number of lines used to draw the spiral, must be a positive integer.</li>
+<li><strong>angle</strong> (<em>int</em>) – the angle between two consecutive lines, must be an integer.</li>
+<li><strong>size</strong> (<em>int</em>) – size of the first line, must be a positive integer.</li>
+<li><strong>space</strong> (<em>int</em>) – every time a line is drawn, the size of the next size is increased by “space”, must be a positive integer.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">the animal’s position.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">window</span><span class="o">=</span><span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tess</span><span class="o">=</span><span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spiral</span><span class="p">(</span><span class="n">tess</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+<span class="go">(60.18,19.15)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="intro.html" title="previous chapter"><strong>GENERAL DESCRIPTION</strong></a></li>
+      <li>Next: <a href="modules.html" title="next chapter">HPC_Docstrings</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, A et H.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/turtle_comments.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

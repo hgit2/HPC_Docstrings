@@ -7,10 +7,13 @@ Welcome to HPC_Docstrings's documentation!
 ==========================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+	:maxdepth: 2
 
-   intro
+
+	intro
+	turtle_comments
+	modules
+
 
 Indices and tables
 ==================

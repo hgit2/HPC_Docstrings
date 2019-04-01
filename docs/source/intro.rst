@@ -1,8 +1,12 @@
-| **GENERAL DESCRIPTION**
+**GENERAL DESCRIPTION**
+=======================
+
 | turtle_comments.py provides the user with several functions that draw different types of figures:
+
 * a square
 * several squares
 * concentric squares
+* a star 
 * a n-gon
 * a spiral
 

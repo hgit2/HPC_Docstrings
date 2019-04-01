@@ -1,0 +1,206 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>turtle_comments &#8212; HPC_Docstrings 0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for turtle_comments</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="c1"># General Imports</span>
+<span class="kn">import</span> <span class="nn">turtle</span> 
+
+<div class="viewcode-block" id="carre"><a class="viewcode-back" href="../turtle_comments.html#turtle_comments.carre">[docs]</a><span class="k">def</span> <span class="nf">carre</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; draws a square of size &quot;size&quot;, the drawing made by the chosen animal.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        animal (turtle): name of the animal, must be a turtle object. </span>
+<span class="sd">        size (int): size of the square, must be a positive integer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="petitscarres"><a class="viewcode-back" href="../turtle_comments.html#turtle_comments.petitscarres">[docs]</a><span class="k">def</span> <span class="nf">petitscarres</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;draws n square of size &quot;size&quot;, the drawing made by the chosen animal.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        animal (turtle): name of the animal, must be a turtle object.</span>
+<span class="sd">        n (int) : number of square to draw, must be a positive integer.</span>
+<span class="sd">        size (int): size of the square, must be a positive integer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">carre</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="carresconc"><a class="viewcode-back" href="../turtle_comments.html#turtle_comments.carresconc">[docs]</a><span class="k">def</span> <span class="nf">carresconc</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;draws n concentric squares of initial size &quot;size&quot;, the drawing made by the chosen animal.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        animal (turtle): name of the animal, must be a turtle object.</span>
+<span class="sd">        n (int) : number of square to draw, must be a positive integer.</span>
+<span class="sd">        size (int): size of the first square (the smallest) , must be a positive integer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">size</span> <span class="c1"># A quoi sert a?</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">carre</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="o">+</span><span class="mi">20</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="draw_poly"><a class="viewcode-back" href="../turtle_comments.html#turtle_comments.draw_poly">[docs]</a><span class="k">def</span> <span class="nf">draw_poly</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">sz</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;draws a &quot;n&quot;-gon with sides of size size &quot;size&quot;, the drawing made by the chosen animal.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        animal (turtle): name of the animal, must be a turtle object.</span>
+<span class="sd">        n (int) : number of sides of the polygon, must be a positive integer.</span>
+<span class="sd">        size (int): size of the sides of the n-gon, must be a positive integer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">sz</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="o">/</span><span class="n">n</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="bigstar"><a class="viewcode-back" href="../turtle_comments.html#turtle_comments.bigstar">[docs]</a><span class="k">def</span> <span class="nf">bigstar</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;draws a star made up from &quot;n&quot; squares, which sides are of size &quot;size&quot;, the drawing made by the chosen animal.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        animal (turtle): name of the animal, must be a turtle objecanimal</span>
+<span class="sd">        n (int) : number of squares used to draw the star, must be a positive integer.</span>
+<span class="sd">        size (int): size of the sides of the n-gon, must be a positive integer.</span>
+<span class="sd">        </span>
+<span class="sd">   .. math::</span>
+<span class="sd">       :nowrap:</span>
+<span class="sd">    </span>
+<span class="sd">       \\begin{eqnarray}</span>
+<span class="sd">           y    &amp; = &amp; ax^2 + bx + c \\</span>
+<span class="sd">       \\end{eqnarray}</span>
+<span class="sd">   </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <span class="n">carre</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">size</span><span class="p">)</span>
+            <span class="n">animal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="o">/</span><span class="n">n</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="spiral"><a class="viewcode-back" href="../turtle_comments.html#turtle_comments.spiral">[docs]</a><span class="k">def</span> <span class="nf">spiral</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">angle</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="n">space</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;draws a spiral made up from &quot;n&quot; lines of increasing size, the drawing made by the chosen animal.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        animal (turtle): name of the animal, must be a turtle object.</span>
+<span class="sd">        n (int): number of lines used to draw the spiral, must be a positive integer.</span>
+<span class="sd">        angle (int): the angle between two consecutive lines, must be an integer. </span>
+<span class="sd">        size (int): size of the first line, must be a positive integer.</span>
+<span class="sd">        space (int): every time a line is drawn, the size of the next size is increased by &quot;space&quot;, must be a positive integer.</span>
+<span class="sd">        </span>
+<span class="sd">    Return:</span>
+<span class="sd">        the animal&#39;s position.</span>
+<span class="sd">        </span>
+<span class="sd">    Examples:</span>
+<span class="sd">        </span>
+<span class="sd">        &gt;&gt;&gt; import turtle</span>
+<span class="sd">        &gt;&gt;&gt; window=turtle.Screen()</span>
+<span class="sd">        &gt;&gt;&gt; tess=turtle.Turtle()</span>
+<span class="sd">        &gt;&gt;&gt; spiral(tess,10,13, 20,9)</span>
+<span class="sd">        (60.18,19.15)</span>
+<span class="sd">        </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">animal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">animal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="o">-</span><span class="n">angle</span><span class="p">)</span>
+        <span class="n">size</span><span class="o">+=</span><span class="n">space</span>
+    <span class="k">return</span> <span class="n">animal</span><span class="o">.</span><span class="n">pos</span><span class="p">()</span></div>
+
+
+<span class="c1">## code test</span>
+<span class="c1">#window=turtle.Screen()</span>
+<span class="c1">#tess=turtle.Turtle() # : modele d&#39;initialisation d&#39;une turtle</span>
+<span class="c1">#print(spiral(tess,10,13, 20,9))</span>
+<span class="c1">#turtle.mainloop()</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, A et H.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
