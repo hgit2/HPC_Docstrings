@@ -22,6 +22,10 @@ A - Yes, you just need to call the draw_poly function with n set to a high value
 Q - Can I draw a rectangle?
 A - Unfortunately, no.
 
+CONTRIBUTE:
+==========
+Turtle_comments.py is in the root directory.
+
 TODO:
 ====
 Implement functions to draw additional kinds of figure such as rectangles (which are not squares).
