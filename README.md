@@ -24,8 +24,7 @@ A - Unfortunately, no.
 
 CONTRIBUTE:
 ==========
-turtle_comments.py is in the root directory of this repository. You can find the doc in 
-[here](HPC_Docstring/docs/build/html/index.html)
+turtle_comments.py is in the root directory of this repository. You can find the doc in HPC_Docstring/docs/build/html/index.html
 
 TODO:
 ====
