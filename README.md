@@ -1,6 +1,6 @@
 DESCRIPTION:
 ===========
-Turtle_comments.py provides the user with several functions that draw different types of figures:
+turtle_comments.py provides the user with several functions that draw different types of figures:
 
 * a square with "carre(animal,size)" 
 * several squares with "petitscarres(animal,n,size)"
@@ -16,7 +16,7 @@ INSTALLATION:
 
 FAQ:
 ===
-Q - Can I draw a circle?
+Q - Can I draw a circle? 
 A - Yes, you just need to call the draw_poly function with n set to a high value.
 
 Q - Can I draw a rectangle?
