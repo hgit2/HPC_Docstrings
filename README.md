@@ -9,7 +9,7 @@ turtle_comments.py provides the user with several functions that draw different 
 * a star with "bigstar(animal,n,size)"
 * a spiral with "spiral(animal,n,angle,size,space)"
 
-Turtle_comments.py is written in Python3 and each of these functions require the turtle library.
+turtle_comments.py is written in Python3 and each of these functions require the turtle library.
 
 INSTALLATION:
 ============
@@ -24,7 +24,8 @@ A - Unfortunately, no.
 
 CONTRIBUTE:
 ==========
-Turtle_comments.py is in the root directory.
+turtle_comments.py is in the root directory of this repository. You can find the doc in 
+[here](HPC_Docstring/docs/build/html/index.html)
 
 TODO:
 ====
@@ -32,4 +33,6 @@ Implement functions to draw additional kinds of figure such as rectangles (which
 
 LICENSE:
 =======
-[mon lien](http://)
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
