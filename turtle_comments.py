@@ -49,7 +49,7 @@ def carresconc(animal,n,size):
         animal.pendown()
 
 def draw_poly(animal,n,sz):
-    """draws a "n"-gon with sides of size size "size", the drawing made by the chosen animal.
+    """draws a "n"-gon with sides of size "size", the drawing made by the chosen animal.
     
     Args:
         animal (turtle): name of the animal, must be a turtle object.
