@@ -3,8 +3,10 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+print("setup :", setuptools.find_packages())
+
 setuptools.setup(
-    name="turtle_comments",
+    name="turtle-comments-package-test-ha",
     version="0.0.1",
     author="a et h",
     author_email="alice.genestier@insa-lyon.fr",
@@ -15,7 +17,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: GNU :: GENERAL PUBLIC LICENSE",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
     ],
 )
