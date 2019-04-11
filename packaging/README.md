@@ -13,6 +13,8 @@ turtle_comments.py is written in Python3 and each of these functions require the
 
 INSTALLATION:
 ============
+type the command : 
+python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps turtle-comment-package-test-ha
 
 FAQ:
 ===
