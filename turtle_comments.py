@@ -114,8 +114,3 @@ def spiral(animal,n,angle,size,space):
     return animal.pos()
 
 
-## code test
-#window=turtle.Screen()
-#tess=turtle.Turtle() # : modele d'initialisation d'une turtle
-#print(spiral(tess,10,13, 20,9))
-#turtle.mainloop()
